@@ -1,3 +1,3 @@
 argument: main.c 
-	gcc main.c -o teststack
+	gcc main.c -o stack
 
