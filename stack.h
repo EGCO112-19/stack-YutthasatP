@@ -31,16 +31,17 @@ char pop(StackPtr s)
 }
 void pop_all(StackPtr s)
 {
+  int i;
   NodePtr t = s->top;
   char c;
-  while (s->top)
+  while (s->size != 0)
   {
     t = s->top;
     c = t->data;
     s->top = t->nextPtr;
     free (t);
     printf ("popping %c\n",c);
+    s->size--;
   }
 }
-int checkpop()
 #endif
